@@ -1,0 +1,322 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww14740\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs32 \cf0 ITToastMessage
+\b0\fs24 \
+\
+----------------------------------------------------------------\
+Inherits From:	UIView\
+----------------------------------------------------------------\
+Declared In:		ITToastMessage.h\
+----------------------------------------------------------------\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 \
+
+\fs28 Overview
+\b0\fs24 \
+----------------------------------------------------------------\
+A toast is a view containing a small message for the user, much like Android's Toast widget.\
+The view briefly appears floating in its superview. The idea is to be as unobtrusive as possible, while still conveying information.\
+The easiest way to use this class is to call one of the static methods that initializes and shows a toast message.\
+\
+
+\b\fs28 Tasks
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 ----------------------------------------------------------------\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Configuring Toast Message
+\b0 \
+	
+\f1 duration	
+\fs20 (property)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs24 \cf0 	text		
+\fs20 (property)
+\f0\fs24 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Displaying a Singleton Toast Message
+\b0 \
+	
+\f1 + toastWithText:\
+	+ toastWithText:inView:\
+	+ toastWithDuration:andText:\
+	+ toastWithDuration:andText:inView:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Creating and Initializing Toast Messages
+\b0 \
+	
+\f1 - initWithText:\
+	- initWithDuration:andText:
+\f0 \
+\
+
+\b Displaying Toast Messages
+\b0 \
+	
+\f1 - display\
+	- displayInView:
+\f0 \
+\
+\
+
+\b\fs28 Constants
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 ----------------------------------------------------------------
+\f1 \
+ITToastMessageShortDuration	1.0\
+ITToastMessageDefaultDuration	2.0\
+ITToastMessageLongDuration	3.0	
+\f0 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b\fs28 \cf0 Properties
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 ----------------------------------------------------------------\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 duration
+\b0 \
+	The length of time to display the toast message.\
+	
+\f1 (assign) CGFloat duration\
+\
+
+\f0\b text
+\b0 \
+	The string to display in the toast message.\
+	
+\f1 (copy) NSString *text\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b\fs28 \cf0 Class Methods
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 ----------------------------------------------------------------\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 toastWithText:
+\b0 \
+	Creates and displays a toast message in the default view for the default duration.\
+	
+\f1 + (void)toastWithText:(NSString *)aString\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 	
+\i Parameters:\
+
+\i0 	
+\f1 aString\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\i \cf0 		
+\i0 The string to display in the toast message.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 toastWithText:inView:
+\b0 \
+	Creates and displays a toast message in the given view for the default duration.\
+	
+\f1 + (void)toastWithText:(NSString *)aString inView:(UIView *)view\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 	
+\i Parameters:\
+
+\i0 	
+\f1 aString\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\i \cf0 		
+\i0 The string to display in the toast message.\
+	
+\f1 view\
+
+\f0\i 		
+\i0 The view in which to display in the toast message.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 toastWithDuration:andText:
+\b0 \
+	Creates and displays a toast message in the default view for the given duration.\
+	
+\f1 + (void)toastWithDuration:(CGFloat)aDuration andText:(NSString *)aString\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 	
+\i Parameters:\
+	
+\f1\i0 aDuration\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\i \cf0 		
+\i0 The length of time to display the toast message.
+\i \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\i0 \cf0 	
+\f1 aString\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\i \cf0 		
+\i0 The string to display in the toast message.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 toastWithDuration:andText:inView:
+\b0 \
+	Creates and displays a toast message in the given view for the given duration.\
+	
+\f1 + (void)toastWithDuration:(CGFloat)aDuration andText:(NSString *)aString inView:(UIView *)view\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 	
+\i Parameters:\
+	
+\f1\i0 aDuration\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\i \cf0 		
+\i0 The length of time to display the toast message.
+\i \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\i0 \cf0 	
+\f1 aString\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\i \cf0 		
+\i0 The string to display in the toast message.\
+	
+\f1 view\
+
+\f0\i 		
+\i0 The view in which to display in the toast message.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b\fs28 \cf0 Instance Methods
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 ----------------------------------------------------------------\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 initWithText:\
+	
+\b0 Returns an 
+\f1 ITToastMessage
+\f0  object initialized with the given string, for the default duration.
+\b \
+	
+\f1\b0 - (id)initWithText:(NSString *)aString\
+	
+\f0\i Parameters:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\i0 \cf0 	
+\f1 aString\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\i \cf0 		
+\i0 The string to display in the toast message.\
+	
+\i Return Value:
+\i0 \
+	An 
+\f1 ITToastMessage
+\f0  object.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 initWithDuration:andText:\
+	
+\b0 Returns an 
+\f1 ITToastMessage
+\f0  object initialized with the given string, for the given duration.
+\b \
+	
+\f1\b0 - (id)initWithDuration:(CGFloat)aDuration andText:(NSString *)aString\
+	
+\f0\i Parameters:\
+	
+\f1\i0 aString\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\i \cf0 		
+\i0 The length of time to display the toast message.
+\i \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\i0 \cf0 	
+\f1 aString\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\i \cf0 		
+\i0 The string to display in the toast message.\
+	
+\i Return Value:
+\i0 \
+	An 
+\f1 ITToastMessage
+\f0  object.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 display:\
+	
+\b0 Displays the 
+\f1 ITToastMessage
+\f0  object in the default view for the 
+\f1 ITToastMessage
+\f0 's duration.
+\b \
+	
+\f1\b0 - (void)display\
+\
+
+\f0\b displayInView:\
+	
+\b0 Displays the 
+\f1 ITToastMessage
+\f0  object in the given view for the 
+\f1 ITToastMessage
+\f0 's duration.
+\b \
+	
+\f1\b0 - (void)displayInView:(UIView *)view\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\i \cf0 	Parameters:\
+	
+\f1\i0 view\
+
+\f0\i 		
+\i0 The view in which to display in the toast message.}
