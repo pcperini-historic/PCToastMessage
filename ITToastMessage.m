@@ -48,7 +48,8 @@
 
 + (void)toastWithText:      (NSString *)aString inView:  (UIView *)view
 {return [ITToastMessage toastWithDuration: ITToastMessageDefaultDuration
-                                  andText: aString inView: view];}
+                                  andText: aString
+                                   inView: view];}
 
 + (void)toastWithDuration:  (CGFloat)aDuration  andText: (NSString *)aString
 {return [ITToastMessage toastWithDuration: aDuration
@@ -119,12 +120,13 @@
 - (void)dealloc
 {
     [_label release];
+    [text release];
     [super dealloc];
 }
 
 - (void)display
 {    
-    return [self displayInView: [[[[[UIApplication sharedApplication] delegate] window] rootViewController] view]];
+    [self displayInView: [[[[[UIApplication sharedApplication] delegate] window] rootViewController] view]];
 }
 
 - (void)displayInView:      (UIView *)view
@@ -138,23 +140,27 @@
     [view addSubview: self];
     
     [UIView beginAnimations: nil context: nil];
-    [UIView setAnimationCurve: UIViewAnimationCurveEaseIn];
-    [UIView setAnimationDuration: MessageFadeInDuration];
-    [UIView setAnimationDelegate: self];
-    [UIView setAnimationDidStopSelector: @selector(finishDisplay)];
-    self.alpha = 1;
+    //{
+        [UIView setAnimationCurve: UIViewAnimationCurveEaseIn];
+        [UIView setAnimationDuration: MessageFadeInDuration];
+        [UIView setAnimationDelegate: self];
+        [UIView setAnimationDidStopSelector: @selector(finishDisplay)];
+        self.alpha = 1;
+    //}
     [UIView commitAnimations];
 }
 
 - (void)finishDisplay
 {
     [UIView beginAnimations: nil context: nil];
-    [UIView setAnimationCurve: UIViewAnimationCurveEaseIn];
-    [UIView setAnimationDuration: MessageFadeOutDuration];
-    [UIView setAnimationDelay: duration];
-    [UIView setAnimationDelegate: self];
-    [UIView setAnimationDidStopSelector: @selector(removeFromSuperview)];
-    self.alpha = 0;
+    //{
+        [UIView setAnimationDelay: duration];
+        [UIView setAnimationCurve: UIViewAnimationCurveEaseOut];
+        [UIView setAnimationDuration: MessageFadeOutDuration];
+        [UIView setAnimationDelegate: self];
+        [UIView setAnimationDidStopSelector: @selector(removeFromSuperview)];
+        self.alpha = 0;
+    //}
     [UIView commitAnimations];
 }
 
