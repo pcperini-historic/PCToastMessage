@@ -132,7 +132,7 @@ The easiest way to use this class is to call one of the static methods that init
 
 >Returns an `ITToastMessage` object initialized with the given string, for the default duration.
 
-        + (void)toastWithText:(NSString *)aString
+        + (id)initWithText:(NSString *)aString
 
 >*Parameters:*
 
@@ -148,7 +148,7 @@ The easiest way to use this class is to call one of the static methods that init
 
 >Returns an `ITToastMessage` object initialized with the given string, for the default duration.
 
-        + (void)toastWithDuration:(CGFloat)aDuration andText:(NSString *)aString
+        + (id)initWithDuration:(CGFloat)aDuration andText:(NSString *)aString
 
 >*Parameters:*
 
