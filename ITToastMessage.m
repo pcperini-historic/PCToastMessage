@@ -3,7 +3,7 @@
 //  ITToastMessageTest
 //
 //  Created by Patrick Perini on 9/29/11.
-//  Copyright (c) 2011 Inspyre Technologies. All rights reserved.
+//  Licensing information available in README.md
 //
 
 //Self
