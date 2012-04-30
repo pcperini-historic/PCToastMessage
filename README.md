@@ -1,10 +1,10 @@
-#ITToastMessage#
+#PCToastMessage#
 
 
 
 Inherits From:    UIView
 
-Declared In:      ITToastMessage.h
+Declared In:      PCToastMessage.h
 
 
 ##Overview##
@@ -39,9 +39,9 @@ The easiest way to use this class is to call one of the static methods that init
 
 ##Constants##
 
-    ITToastMessageShortDuration	    1.0
-    ITToastMessageDefaultDuration   2.0
-    ITToastMessageLongDuration      3.0
+    PCToastMessageShortDuration	    1.0
+    PCToastMessageDefaultDuration   2.0
+    PCToastMessageLongDuration      3.0
 
 
 ##Properties##
@@ -130,7 +130,7 @@ The easiest way to use this class is to call one of the static methods that init
 
 **initWithText:**
 
->Returns an `ITToastMessage` object initialized with the given string, for the default duration.
+>Returns an `PCToastMessage` object initialized with the given string, for the default duration.
 
         + (id)initWithText:(NSString *)aString
 
@@ -142,11 +142,11 @@ The easiest way to use this class is to call one of the static methods that init
 
 >*Return Value:*
 
->An `ITToastMessage` object.
+>An `PCToastMessage` object.
 
 **initWithDuration:andText:**
 
->Returns an `ITToastMessage` object initialized with the given string, for the default duration.
+>Returns an `PCToastMessage` object initialized with the given string, for the default duration.
 
         + (id)initWithDuration:(CGFloat)aDuration andText:(NSString *)aString
 
@@ -162,17 +162,17 @@ The easiest way to use this class is to call one of the static methods that init
 
 >*Return Value:*
 
->An `ITToastMessage` object.
+>An `PCToastMessage` object.
 
 **display**
 
->Displays the `ITToastMessage` object in the default view for the `ITToastMessage`'s duration.
+>Displays the `PCToastMessage` object in the default view for the `PCToastMessage`'s duration.
 
         - (void)display
 
 **displayInView:**
 
->Displays the `ITToastMessage` object in the given view for the `ITToastMessage`'s duration.
+>Displays the `PCToastMessage` object in the given view for the `PCToastMessage`'s duration.
 
         - (void)displayInView:(UIView *)view
 
@@ -184,12 +184,12 @@ The easiest way to use this class is to call one of the static methods that init
 
 #License#
 
-License Agreement for Source Code provided by Inspyre Technologies
+License Agreement for Source Code provided by Patrick Perini
 
-This software is supplied to you by Inspyre Technologies in consideration of your agreement to the following terms, and your use, installation, modification or redistribution of this software constitutes acceptance of these terms. If you do not agree with these terms, please do not use, install, modify or redistribute this software.
+This software is supplied to you by Patrick Perini in consideration of your agreement to the following terms, and your use, installation, modification or redistribution of this software constitutes acceptance of these terms. If you do not agree with these terms, please do not use, install, modify or redistribute this software.
 
-In consideration of your agreement to abide by the following terms, and subject to these terms, Inspyre Technologies grants you a personal, non-exclusive license, to use, reproduce, modify and redistribute the software, with or without modifications, in source and/or binary forms; provided that if you redistribute the software in its entirety and without modifications, you must retain this notice and the following text and disclaimers in all such redistributions of the software, and that in all cases attribution of Inspyre Technologies as the original author of the source code shall be included in all such resulting software products or distributions. Neither the name, trademarks, service marks or logos of Inspyre Technologies may be used to endorse or promote products derived from the software without specific prior written permission from Inspyre Technologies. Except as expressly stated in this notice, no other rights or licenses, express or implied, are granted by Inspyre Technologies herein, including but not limited to any patent rights that may be infringed by your derivative works or by other works in which the software may be incorporated.
+In consideration of your agreement to abide by the following terms, and subject to these terms, Patrick Perini grants you a personal, non-exclusive license, to use, reproduce, modify and redistribute the software, with or without modifications, in source and/or binary forms; provided that if you redistribute the software in its entirety and without modifications, you must retain this notice and the following text and disclaimers in all such redistributions of the software, and that in all cases attribution of Patrick Perini as the original author of the source code shall be included in all such resulting software products or distributions. Neither the name, trademarks, service marks or logos of Patrick Perini may be used to endorse or promote products derived from the software without specific prior written permission from Patrick Perini. Except as expressly stated in this notice, no other rights or licenses, express or implied, are granted by Patrick Perini herein, including but not limited to any patent rights that may be infringed by your derivative works or by other works in which the software may be incorporated.
 
-The software is provided by Inspyre Technologies on an "AS IS" basis. Inspyre Technologies MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING THE SOFTWARE OR ITS USE AND OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+The software is provided by Patrick Perini on an "AS IS" basis. Patrick Perini MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, REGARDING THE SOFTWARE OR PCS USE AND OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
 
-IN NO EVENT SHALL Inspyre Technologies BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION OF THE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF Inspyre Technologies HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+IN NO EVENT SHALL Patrick Perini BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION OF THE SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF Patrick Perini HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

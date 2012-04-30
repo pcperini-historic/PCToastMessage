@@ -1,6 +1,6 @@
 //
-//  ITToastMessage.m
-//  ITToastMessageTest
+//  PCToastMessage.m
+//  PCToastMessageTest
 //
 //  Created by Patrick Perini on 9/29/11.
 //  Licensing information available in README.md
@@ -35,37 +35,37 @@
 #define MessageFadeInDuration           0.50
 #define MessageFadeOutDuration          0.50
 
-#import "ITToastMessage.h"
+#import "PCToastMessage.h"
 
-@implementation ITToastMessage
+@implementation PCToastMessage
 
 @synthesize duration;
 @synthesize text;
 
 + (void)toastWithText:      (NSString *)aString
-{return [ITToastMessage toastWithDuration: ITToastMessageDefaultDuration
+{return [PCToastMessage toastWithDuration: PCToastMessageDefaultDuration
                                   andText: aString];}
 
 + (void)toastWithText:      (NSString *)aString inView:  (UIView *)view
-{return [ITToastMessage toastWithDuration: ITToastMessageDefaultDuration
+{return [PCToastMessage toastWithDuration: PCToastMessageDefaultDuration
                                   andText: aString
                                    inView: view];}
 
 + (void)toastWithDuration:  (CGFloat)aDuration  andText: (NSString *)aString
-{return [ITToastMessage toastWithDuration: aDuration
+{return [PCToastMessage toastWithDuration: aDuration
                                   andText: aString
                                    inView: [[[[[UIApplication sharedApplication] delegate] window] rootViewController] view]];}
 
 + (void)toastWithDuration:  (CGFloat)aDuration  andText: (NSString *)aString inView: (UIView *)view
 {
-    ITToastMessage *singleton = [[ITToastMessage alloc] initWithDuration: aDuration
+    PCToastMessage *singleton = [[PCToastMessage alloc] initWithDuration: aDuration
                                                                  andText: aString];
     [singleton displayInView: view];
     [singleton release];
 }
 
 - (id)initWithText:         (NSString *)aString
-{return [self initWithDuration: ITToastMessageDefaultDuration
+{return [self initWithDuration: PCToastMessageDefaultDuration
                        andText: aString];}
 
 - (id)initWithDuration:     (CGFloat)aDuration  andText:(NSString *)aString

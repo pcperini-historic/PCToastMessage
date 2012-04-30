@@ -1,19 +1,19 @@
 //
-//  ITToastMessage.h
-//  ITToastMessageTest
+//  PCToastMessage.h
+//  PCToastMessageTest
 //
 //  Created by Patrick Perini on 9/29/11.
 //  Licensing information available in README.md
 //
 
-#define ITToastMessageShortDuration     1.0
-#define ITToastMessageDefaultDuration   2.0
-#define ITToastMessageLongDuration      3.0
+#define PCToastMessageShortDuration     1.0
+#define PCToastMessageDefaultDuration   2.0
+#define PCToastMessageLongDuration      3.0
 
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface ITToastMessage : UIView
+@interface PCToastMessage : UIView
 {
     @private
     UILabel *_label;
